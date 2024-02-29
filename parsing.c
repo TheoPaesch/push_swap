@@ -6,13 +6,13 @@
 /*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 12:30:31 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/02/28 15:18:33 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/02/29 13:54:29 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int is_all_num(int argc, char **argv)
+int num_check(int argc, char **argv)
 {
     int i;
     int j;

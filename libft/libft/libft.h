@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:51:55 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/02/28 13:06:40 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/02/29 12:43:49 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,5 @@ char	*ft_itoa(int n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	**ft_split(char const *s, char c);
 int	    ft_malloc(size_t size, void **ptr);
-int	    ft_atoi(const char *str, int *num);
+int	    ft_atoi_2(const char *str, int *num);
 #endif
