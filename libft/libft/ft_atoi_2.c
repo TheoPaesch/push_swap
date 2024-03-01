@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_2.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 12:47:06 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/02/29 13:48:23 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/01 16:25:22 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi_2(const char *str, int *num)
 {
-	int		    i;
-	long int    temp;
-	int		    cnt2;
+	int			i;
+	long int	temp;
+	int			cnt2;
 
 	cnt2 = 1;
 	i = 0;
@@ -32,8 +32,8 @@ int	ft_atoi_2(const char *str, int *num)
 	}
 	if (cnt2 == 2)
 		temp = (temp * (-1));
-    if (temp > 2147483647 || temp < -2147483648)
-        return (1);
-    *num = (int *)temp;
+	if (temp > 2147483647 || temp < -2147483648)
+		return (1);
+	*num = (int *)temp;
 	return (0);
 }

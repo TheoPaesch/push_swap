@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isnum.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 13:21:37 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/02/28 13:22:56 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/02/29 15:35:25 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(char num)
+int	ft_isnum(char num)
 {
-	if ((num >= '0' && num <= '9') || num == '+' || num == '-')
+	if (num >= '0' && num <= '9')
 		return (0);
 	return (1);
 }

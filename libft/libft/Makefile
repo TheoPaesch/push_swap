@@ -35,7 +35,8 @@ ft_substr.c \
 ft_tolower.c \
 ft_toupper.c \
 ft_malloc.c \
-ft_atoi_2.c
+ft_atoi_2.c \
+ft_isnum.c \
 
 
 OBJECTS	= ${SOURCES:.c=.o}
@@ -43,7 +44,7 @@ OBJECTS	= ${SOURCES:.c=.o}
 INCLUDES	= libft.h
 
 CFLAGS	= -Wall -Wextra -Werror
-CFLAGS	= 
+CFLAGS	=
 
 .c.o:
 	cc ${CFLAGS} -c $< -o ${<:.c=.o} -I ${INCLUDES}
