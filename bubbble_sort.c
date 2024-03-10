@@ -1,27 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   bubbble_sort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 11:26:31 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/10 11:56:58 by tpaesch          ###   ########.fr       */
+/*   Created: 2024/03/10 11:47:25 by tpaesch           #+#    #+#             */
+/*   Updated: 2024/03/10 11:47:57 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+void	bubble_sort(int *arr_c, int n)
 {
-	if (argc < 3)
+	int	i;
+	int	swapped;
+	int	j;
+	int	temp;
+
+	i = 0;
+	while (i < n - 1)
 	{
-		ft_error(0);
-		return (1);
-	}
-	else
-	{
-		if (!init_arr(argc, argv))
-			return (1);
+		swapped = 0;
+		j = 0;
+		while (j < n - i - 1)
+		{
+			if (arr_c[j] > arr_c[j + 1])
+			{
+				temp = arr_c[j];
+				arr_c[j] = arr_c[j + 1];
+				arr_c[j + 1] = temp;
+				swapped = 1;
+			}
+			j++;
+		}
+		if (swapped == 0)
+			break ;
+		i++;
 	}
 }
