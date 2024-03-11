@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_2.c                                        :+:      :+:    :+:   */
+/*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 12:47:06 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/11 16:37:23 by tpaesch          ###   ########.fr       */
+/*   Created: 2024/03/11 15:49:57 by tpaesch           #+#    #+#             */
+/*   Updated: 2024/03/11 15:55:40 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-int	ft_atoi_2(const char *str, int *num)
+void	switch_index(int *arr_c)
 {
-	int			i;
-	long int	temp;
+	int	i;
 
-	i = 0;
-	temp = 0;
-	if (str[i] == '+' || str[i] == '-')
-		i++;
-	while (str[i] <= '9' && str[i] >= '0')
+	i = 1;
+	while (i < arr_c[0])
 	{
-		temp = (temp * 10) + (str[i] - '0');
+		arr_c[i] = arr_c[i + 1];
 		i++;
 	}
-	if (str[0] == '-')
-		temp *= - 1;
-	if (temp > 2147483647 || temp < -2147483648)
-		return (1);
-	*num = (int *)temp;
-	return (0);
+	arr_c[0]--;
+}
+
+int index_check(int range, int count, int size)
+{
+    if (ragne + count > size)
+        return (0);
+    return (1);
 }

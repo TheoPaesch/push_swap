@@ -3,12 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:26:05 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/10 17:23:36 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/11 15:58:28 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 #include "libft/ft_printf.h"
 
@@ -29,3 +32,7 @@ void	sort_four(int *arr_a, int *arr_b, int *arr_c);
 void	sort_five(int *arr_a, int *arr_b, int *arr_c);
 void	bubble_sort(int *arr_c, int n);
 int		check_doubles(int *arr_a, int len);
+int     index_check(int range, int count, int size);
+void	switch_index(int *arr_c);
+
+#endif

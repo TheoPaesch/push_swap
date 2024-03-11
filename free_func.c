@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_2.c                                        :+:      :+:    :+:   */
+/*   free_func.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 12:47:06 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/11 16:37:23 by tpaesch          ###   ########.fr       */
+/*   Created: 2024/03/11 16:04:03 by tpaesch           #+#    #+#             */
+/*   Updated: 2024/03/11 16:42:16 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "push_swap.h"
 
-int	ft_atoi_2(const char *str, int *num)
+void    free_all(int *arr_a, int *arr_b, int *arr_c, int flag)
 {
-	int			i;
-	long int	temp;
-
-	i = 0;
-	temp = 0;
-	if (str[i] == '+' || str[i] == '-')
-		i++;
-	while (str[i] <= '9' && str[i] >= '0')
-	{
-		temp = (temp * 10) + (str[i] - '0');
-		i++;
-	}
-	if (str[0] == '-')
-		temp *= - 1;
-	if (temp > 2147483647 || temp < -2147483648)
-		return (1);
-	*num = (int *)temp;
-	return (0);
+	free(arr_a);
+	free(arr_b);
+    free(arr_c);
+    arr_a = NULL;
+    arr_b = NULL;
+    arr_c = NULL;
+    if (flag == 1)
+	    ft_error(4);
+	exit(EXIT_FAILURE);
 }
