@@ -6,11 +6,13 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 18:46:05 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/01 19:05:01 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/11 22:40:55 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+void	ft_error_2(int i);
 
 void	ft_error(int i)
 {

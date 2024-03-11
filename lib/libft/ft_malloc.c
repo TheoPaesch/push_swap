@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_func.c                                        :+:      :+:    :+:   */
+/*   ft_malloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 16:04:03 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/11 16:42:16 by tpaesch          ###   ########.fr       */
+/*   Created: 2024/02/28 11:38:09 by tpaesch           #+#    #+#             */
+/*   Updated: 2024/03/11 22:28:50 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "push_swap.h"
+#include "libft.h"
 
-void    free_all(int *arr_a, int *arr_b, int *arr_c, int flag)
+int	ft_malloc(size_t size, void **ptr)
 {
-	free(arr_a);
-	free(arr_b);
-    free(arr_c);
-    arr_a = NULL;
-    arr_b = NULL;
-    arr_c = NULL;
-    if (flag == 1)
-	    ft_error(4);
-	exit(EXIT_FAILURE);
+	*ptr = malloc(size);
+	return (*ptr == NULL);
 }

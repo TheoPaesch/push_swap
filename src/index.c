@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 15:49:57 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/11 15:55:40 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/11 21:21:25 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ void	switch_index(int *arr_c)
 	arr_c[0]--;
 }
 
-int index_check(int range, int count, int size)
+int	index_check(int range, int count, int size)
 {
-    if (ragne + count > size)
-        return (0);
-    return (1);
+	if (range + count > size)
+		return (0);
+	return (1);
 }

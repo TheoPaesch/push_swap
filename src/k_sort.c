@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   k_sort.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 13:27:24 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/11 21:06:42 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/11 22:36:13 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	pre_sort_b(int *arr_a, int *arr_b, int *arr_c)
 			rb(arr_b);
 			count++;
 		}
-		if (index_check(arr_c))
+		if (index_check(range, count, arr_c[0]))
 		{
 			if (arr_a[1] < arr_c[count + range])
 			{
@@ -60,7 +60,7 @@ void	return_to_sender(int *arr_a, int *arr_b, int *arr_c)
 
 	while (arr_b[0] != 0)
 	{
-		moves = move_calc(arr_b, arr_c[0]);
+		moves = move_calc(arr_b, arr_c);
 		if (moves > arr_b[0] / 2)
 		{
 			moves = arr_b[0] - moves;
@@ -82,5 +82,5 @@ void	k_sort(int *arr_a, int *arr_b, int *arr_c)
 	bubble_sort(arr_c, arr_c[0]);
 	pre_sort_b(arr_a, arr_b, arr_c);
 	return_to_sender(arr_a, arr_b, arr_c);
-	free_all(arr_a, arr_b, arr_c);
+	free_all(arr_a, arr_b, arr_c, 0);
 }

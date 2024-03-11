@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_malloc.c                                        :+:      :+:    :+:   */
+/*   ft_isnum.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 11:38:09 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/01 15:44:29 by tpaesch          ###   ########.fr       */
+/*   Created: 2024/02/28 13:21:37 by tpaesch           #+#    #+#             */
+/*   Updated: 2024/03/11 21:24:02 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_malloc(size_t size, void **ptr)
+int	ft_isnum(char num)
 {
-	*ptr = malloc(size);
-	return (*ptr == NULL);
+	if ((num >= '0' && num <= '9') || num == '+' || num == '-')
+		return (0);
+	return (1);
 }

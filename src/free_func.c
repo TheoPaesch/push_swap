@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isnum.c                                         :+:      :+:    :+:   */
+/*   free_func.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 13:21:37 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/02/29 15:35:25 by tpaesch          ###   ########.fr       */
+/*   Created: 2024/03/11 16:04:03 by tpaesch           #+#    #+#             */
+/*   Updated: 2024/03/11 21:24:31 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-int	ft_isnum(char num)
+void	free_all(int *arr_a, int *arr_b, int *arr_c, int flag)
 {
-	if (num >= '0' && num <= '9')
-		return (0);
-	return (1);
+	free(arr_a);
+	free(arr_b);
+	free(arr_c);
+	arr_a = NULL;
+	arr_b = NULL;
+	arr_c = NULL;
+	if (flag == 1)
+		ft_error(4);
+	exit(EXIT_FAILURE);
 }
