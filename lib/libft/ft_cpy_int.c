@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_2.c                                        :+:      :+:    :+:   */
+/*   ft_cpy_int.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 12:47:06 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/12 15:24:42 by tpaesch          ###   ########.fr       */
+/*   Created: 2024/03/12 16:51:01 by tpaesch           #+#    #+#             */
+/*   Updated: 2024/03/12 17:07:51 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	ft_atoi_2(const char *str, int *num)
+void	*ft_intcpy(void *dst, const void *src, size_t n)
 {
-	int			i;
-	long int	temp;
+	int		*doc;
+	int		*suc;
+	size_t	i;
 
+	if (dst == 0 && !src)
+		return (NULL);
+	doc = (int *)dst;
+	suc = (int *)src;
 	i = 0;
-	temp = 0;
-	if (str[i] == '+' || str[i] == '-')
-		i++;
-	while (str[i] <= '9' && str[i] >= '0')
+	while (n >= i)
 	{
-		temp = (temp * 10) + (str[i] - '0');
+		doc[i] = suc[i];
 		i++;
 	}
-	if (str[i] != '\0')
-		return (1);
-	if (str[0] == '-')
-		temp *= -1;
-	if (temp > 2147483647 || temp < -2147483648) /* exit + free if too big*/
-		return (1);
-	*num = (int)temp;
-	return (0);
+	return (doc);
 }

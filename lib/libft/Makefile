@@ -37,6 +37,7 @@ ft_toupper.c \
 ft_malloc.c \
 ft_atoi_2.c \
 ft_isnum.c \
+ft_cpy_int.c \
 
 
 OBJECTS	= ${SOURCES:.c=.o}

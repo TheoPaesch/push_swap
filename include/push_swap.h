@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:26:05 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/11 22:33:55 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/12 18:43:50 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int		rrb(int *arr_b);
 int		pa(int *arr_a, int *arr_b);
 int		pb(int *arr_a, int *arr_b);
 int		ft_sqrd(int nb);
-void	sort_two(int *arr_a);
+void	sort_two(int *arr_a, int *arr_b, int *arr_c);
 void	sort_three(int *arr_a);
 void	sort_four(int *arr_a, int *arr_b, int *arr_c);
 void	sort_five(int *arr_a, int *arr_b, int *arr_c);
@@ -38,5 +38,6 @@ int		index_check(int range, int count, int size);
 void	switch_index(int *arr_c);
 void	free_all(int *arr_a, int *arr_b, int *arr_c, int flag);
 void	k_sort(int *arr_a, int *arr_b, int *arr_c);
+int		is_sorted(int *arr_a, int *arr_c);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 18:09:03 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/10 17:22:07 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/12 18:55:15 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,12 @@ int	ft_sqrd(int nb)
 	return (0);
 }
 
-void	sort_two(int *arr_a)
+void	sort_two(int *arr_a, int *arr_b, int *arr_c)
 {
 	if (arr_a[1] > arr_a[2])
 		sa(arr_a);
+	free_all(arr_a, arr_b, arr_c, 0);
+	exit(EXIT_SUCCESS);
 }
 
 void	sort_three(int *arr_a)

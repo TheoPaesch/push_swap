@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:51:55 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/02/29 15:35:37 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/12 16:53:07 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,5 @@ char	**ft_split(char const *s, char c);
 int		ft_malloc(size_t size, void **ptr);
 int		ft_atoi_2(const char *str, int *num);
 int		ft_isnum(char num);
+void	*ft_intcpy(void *dst, const void *src, size_t n);
 #endif

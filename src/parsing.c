@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 12:30:31 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/11 19:15:30 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/12 20:01:35 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,31 @@ int	check_doubles(int *arr_a, int len)
 	int	i;
 	int	j;
 
-	j = 0;
-	while (j < len)
+	j = 1;
+	while (j <= len)
 	{
-		i = 0;
-		while (i < len)
+		i = 1;
+		while (i <= len)
 		{
-			if (arr_a[i] == arr_a[j])
+			if (arr_a[i] == arr_a[j] && i != j)
 				return (ft_error(6), 1);
 			i++;
 		}
 		j++;
 	}
 	return (0);
+}
+
+int	is_sorted(int *arr_a, int *arr_c)
+{
+	int	i;
+
+	i = 1;
+	while (i <= arr_a[0])
+	{
+		if (arr_a[i] != arr_c[i])
+			return (0);
+		i++;
+	}
+	return (1);
 }
