@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:26:05 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/12 18:43:50 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/13 19:00:07 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ void	switch_index(int *arr_c);
 void	free_all(int *arr_a, int *arr_b, int *arr_c, int flag);
 void	k_sort(int *arr_a, int *arr_b, int *arr_c);
 int		is_sorted(int *arr_a, int *arr_c);
+void	set_index(int *arr_a, int *arr_c);
 
 #endif

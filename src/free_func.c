@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 16:04:03 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/13 18:49:24 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/13 19:04:47 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,8 @@ void	free_all(int *arr_a, int *arr_b, int *arr_c, int flag)
 		}
 		free(arr_a);
 		arr_a = NULL;
-		ft_error(5);
 	}
-	exit(EXIT_FAILURE);
+	exit(EXIT_SUCCESS);
 }
 
 /* have to change so every error is the same and that you have a flag for exit success and exit failiure*/

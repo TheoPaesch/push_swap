@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 13:27:24 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/13 16:59:40 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/13 19:43:06 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,10 @@ void	pre_sort_b(int *arr_a, int *arr_b, int *arr_c)
 			rb(arr_b);
 			count++;
 		}
-		else if (index_check(range, count, arr_c[0]))
+		else if (arr_a[1] < arr_c[count] + range)
 		{
-			if (arr_a[1] < arr_c[count + range])
-			{
-				pb(arr_a, arr_b);
-				count++;
-			}
+			pb(arr_a, arr_b);
+			count++;
 		}
 		else
 			ra(arr_a);
@@ -92,6 +89,7 @@ void	k_sort(int *arr_a, int *arr_b, int *arr_c)
 		sort_five(arr_a, arr_b, arr_c);
 	else
 	{
+		set_index(arr_a, arr_c);
 		pre_sort_b(arr_a, arr_b, arr_c);
 		return_to_sender(arr_a, arr_b, arr_c);
 	}
