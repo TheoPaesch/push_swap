@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 18:09:03 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/12 18:55:15 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/13 15:17:39 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	sort_five(int *arr_a, int *arr_b, int *arr_c)
 	int	i;
 
 	i = 0;
-	while (i < arr_a[0] - 3)
+	while (i <= arr_a[0] - 3)
 	{
 		if (arr_a[1] == arr_c[1] || arr_a[1] == arr_c[2])
 		{

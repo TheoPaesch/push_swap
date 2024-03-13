@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 13:27:24 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/12 20:06:41 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/13 16:59:40 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	pre_sort_b(int *arr_a, int *arr_b, int *arr_c)
 	int	range;
 
 	count = 1;
-	range = ft_sqrd(arr_c[0]) * 1.6;
+	range = ft_sqrd(arr_a[0]) * 1.6;
 	while (arr_a[0] >= 1)
 	{
 		if (arr_a[1] <= arr_c[count])

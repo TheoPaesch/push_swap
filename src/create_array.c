@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:31:54 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/12 20:01:07 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/13 17:17:58 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,3 +43,5 @@ int	init_arr(int argc, char **argv)
 	k_sort(a, b, c);
 	return (0);
 }
+
+/* maybe create a function that will take the index (arr_a) and you bubble sort arr_c so you sort the index and not the numbers*/

@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 12:47:06 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/12 15:24:42 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/13 16:05:00 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_atoi_2(const char *str, int *num)
 		return (1);
 	if (str[0] == '-')
 		temp *= -1;
-	if (temp > 2147483647 || temp < -2147483648) /* exit + free if too big*/
+	if (temp > 2147483647 || temp < -2147483648)
 		return (1);
 	*num = (int)temp;
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:20:19 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/11 22:37:11 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/13 16:57:46 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	pa(int *arr_a, int *arr_b)
 			arr_b[i] = arr_b[i + 1];
 			i++;
 		}
-		arr_b[0]--;
+		arr_b[0] -= 1;
 		return (ft_printf("pa\n"), 0);
 	}
 	return (1);
@@ -60,8 +60,8 @@ int	pb(int *arr_a, int *arr_b)
 			arr_a[i] = arr_a[i + 1];
 			i++;
 		}
-		arr_a[0]--;
-		return (ft_printf("pa\n"), 0);
+		arr_a[0] -= 1;
+		return (ft_printf("pb\n"), 0);
 	}
 	return (1);
 }

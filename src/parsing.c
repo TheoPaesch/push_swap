@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 12:30:31 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/12 20:01:35 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/13 16:29:08 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@ int	num_check(int argc, char **argv)
 	while (i != argc)
 	{
 		j = 0;
-		if (argv[i][0] == '-')
-			i++;
+		if (argv[i][0] == '-' || argv[i][0] == '+')
+			j++;
+		if (argv[i][j] == '\0')
+			return (1);
 		while (argv[i][j] != '\0')
 		{
 			if (ft_isnum(argv[i][j]))
