@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 18:00:19 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/02/29 15:33:35 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/14 12:39:46 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	rb(int *arr_b)
 			i++;
 		}
 		arr_b[arr_b[0]] = temp;
-		ft_printf("ra\n");
+		ft_printf("rb\n");
 		return (0);
 	}
 	return (1);

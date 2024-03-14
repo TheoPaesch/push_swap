@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 15:49:57 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/13 19:38:23 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/14 12:27:59 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	set_index(int *arr_a, int *arr_c)
 	i = 1;
 	while (i <= arr_c[0])
 	{
-		arr_c[i] = i;
+		arr_a[i] = i;
 		i++;
 	}
 }

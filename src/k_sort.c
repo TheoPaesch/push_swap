@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 13:27:24 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/13 19:43:06 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/14 12:44:41 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ void	pre_sort_b(int *arr_a, int *arr_b, int *arr_c)
 			rb(arr_b);
 			count++;
 		}
-		else if (arr_a[1] < arr_c[count] + range)
-		{
-			pb(arr_a, arr_b);
-			count++;
-		}
+		// else if (arr_a[1] < arr_c[count] + range)
+		// {
+		// 	pb(arr_a, arr_b);
+		// 	count++;
+		// }
 		else
 			ra(arr_a);
 	}
@@ -58,16 +58,28 @@ void	return_to_sender(int *arr_a, int *arr_b, int *arr_c)
 	while (arr_b[0] != 0)
 	{
 		moves = move_calc(arr_b, arr_c);
-		if (moves > arr_b[0] / 2)
+		// ft_printf("moves = %i\n", moves);
+		// ft_printf("arr_b[0] = %i\n", arr_b[0]);
+		if (moves > arr_b[1] / 2)
 		{
-			moves = arr_b[0] - moves;
-			while (moves--)
+			// ft_printf("reached1\n");
+			moves = arr_b[1] - moves;
+			while (moves > 0)
+			{
+				// ft_printf("moves = %i\n", moves);
 				rrb(arr_b);
+				moves--;
+			}
 		}
 		else
 		{
-			while (moves--)
+			// ft_printf("reached2\n");
+			while (moves > 0)
+			{
 				rb(arr_b);
+				// ft_printf("moves = %i\n", moves);
+				moves--;
+			}
 		}
 		pa(arr_a, arr_b);
 		switch_index(arr_c);
