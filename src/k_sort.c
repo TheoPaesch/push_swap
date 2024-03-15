@@ -3,91 +3,85 @@
 /*                                                        :::      ::::::::   */
 /*   k_sort.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 13:27:24 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/14 12:44:41 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/15 08:20:33 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pre_sort_b(int *arr_a, int *arr_b, int *arr_c)
+void	pre_sort_b(int *arr_a, int *arr_b)
 {
 	int	count;
 	int	range;
 
-	count = 1;
+	count = 0;
 	range = ft_sqrd(arr_a[0]) * 1.6;
-	while (arr_a[0] >= 1)
+	while (arr_a[0] > 0)
 	{
-		if (arr_a[1] <= arr_c[count])
+		if (arr_a[1] <= count)
 		{
 			pb(arr_a, arr_b);
 			rb(arr_b);
 			count++;
 		}
-		// else if (arr_a[1] < arr_c[count] + range)
-		// {
-		// 	pb(arr_a, arr_b);
-		// 	count++;
-		// }
+		else if (arr_a[1] < count + range)
+		{
+			pb(arr_a, arr_b);
+			count++;
+		}
 		else
 			ra(arr_a);
 	}
 }
 
-int	move_calc(int *arr_b, int *arr_c)
+int	move_calc(int *arr_b)
 {
 	int	moves;
+	int	i;
 
+	i = 1;
 	moves = 0;
 	while (moves != arr_b[0])
 	{
-		if (arr_b[moves] == arr_c[1])
+		if (arr_b[i] == arr_b[0])
 			break ;
 		moves++;
+		i++;
 	}
 	return (moves);
 }
 
-void	return_to_sender(int *arr_a, int *arr_b, int *arr_c)
+void	return_to_sender(int *arr_a, int *arr_b, int *arr_c, int len)
 {
 	int	moves;
 
-	while (arr_b[0] != 0)
+	while (arr_b[0] > 0)
 	{
-		moves = move_calc(arr_b, arr_c);
-		// ft_printf("moves = %i\n", moves);
-		// ft_printf("arr_b[0] = %i\n", arr_b[0]);
-		if (moves > arr_b[1] / 2)
+		moves = move_calc(arr_b);
+		if (moves > arr_b[0] / 2)
 		{
-			// ft_printf("reached1\n");
-			moves = arr_b[1] - moves;
-			while (moves > 0)
-			{
-				// ft_printf("moves = %i\n", moves);
+			moves = arr_b[0] - moves;
+			while (moves--)
 				rrb(arr_b);
-				moves--;
-			}
 		}
 		else
 		{
-			// ft_printf("reached2\n");
-			while (moves > 0)
-			{
+			while (moves--)
 				rb(arr_b);
-				// ft_printf("moves = %i\n", moves);
-				moves--;
-			}
 		}
 		pa(arr_a, arr_b);
-		switch_index(arr_c);
+		switch_index(arr_c, len);
 	}
 }
 
 void	k_sort(int *arr_a, int *arr_b, int *arr_c)
 {
+	int	len;
+
+	len = arr_c[0];
 	bubble_sort(arr_c, arr_c[0]);
 	if (arr_a[0] == 2)
 		sort_two(arr_a, arr_b, arr_c);
@@ -102,8 +96,8 @@ void	k_sort(int *arr_a, int *arr_b, int *arr_c)
 	else
 	{
 		set_index(arr_a, arr_c);
-		pre_sort_b(arr_a, arr_b, arr_c);
-		return_to_sender(arr_a, arr_b, arr_c);
+		pre_sort_b(arr_a, arr_b);
+		return_to_sender(arr_a, arr_b, arr_c, len);
 	}
 	free_all(arr_a, arr_b, arr_c, 0);
 }

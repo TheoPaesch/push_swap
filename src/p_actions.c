@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   p_actions.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:20:19 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/13 16:57:46 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/15 07:37:51 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	pa(int *arr_a, int *arr_b)
 			i--;
 		}
 		arr_a[1] = arr_b[1];
-		arr_a[0]++;
+		arr_a[0] += 1;
 		i = 1;
 		while (i < arr_b[0])
 		{
@@ -53,7 +53,7 @@ int	pb(int *arr_a, int *arr_b)
 			i--;
 		}
 		arr_b[1] = arr_a[1];
-		arr_b[0]++;
+		arr_b[0] += 1;
 		i = 1;
 		while (i < arr_a[0])
 		{

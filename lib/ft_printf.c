@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 14:16:08 by tpaesch           #+#    #+#             */
-/*   Updated: 2023/11/02 11:37:18 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/14 13:22:37 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	switch_print(char c, va_list args)
 	else if (c == 's')
 		return (print_string(va_arg(args, char *)));
 	else if (c == 'p')
-		return (print_pointer((unsigned long )va_arg(args, void *)));
+		return (print_pointer((unsigned long)va_arg(args, void *)));
 	else if (c == 'u')
 		return (print_dec(va_arg(args, unsigned int)));
 	else if (c == 'x')
@@ -36,9 +36,7 @@ int	switch_print(char c, va_list args)
 static int	helper(int *i, const char *str, va_list args)
 {
 	int	temp;
-	int	temp2;
 
-	temp2 = 0;
 	temp = 0;
 	if (str[*i] == '%')
 	{

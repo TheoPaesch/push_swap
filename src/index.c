@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 15:49:57 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/14 12:27:59 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/14 21:06:57 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	switch_index(int *arr_c)
+int	switch_index(int *arr_c, int len)
 {
 	int	i;
 
@@ -22,7 +22,9 @@ void	switch_index(int *arr_c)
 		arr_c[i] = arr_c[i + 1];
 		i++;
 	}
-	arr_c[0]--;
+	len = arr_c[0];
+	arr_c[0] = len - 1;
+	return (len - 1);
 }
 
 int	index_check(int range, int count, int size)
@@ -40,12 +42,15 @@ void	set_index(int *arr_a, int *arr_c)
 	i = 1;
 	while (i <= arr_a[0])
 	{
+		// ft_printf("%i\n", j);
 		j = 1;
 		while (j <= arr_a[0])
 		{
 			if (arr_a[i] == arr_c[j])
 			{
+				// ft_printf("arr_a_before = %i\n", arr_a[i]);
 				arr_a[i] = j;
+				// ft_printf("arr_a_after = %i\n", arr_a[i]);
 				break ;
 			}
 			j++;
@@ -55,7 +60,7 @@ void	set_index(int *arr_a, int *arr_c)
 	i = 1;
 	while (i <= arr_c[0])
 	{
-		arr_a[i] = i;
+		arr_c[i] = i;
 		i++;
 	}
 }

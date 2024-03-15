@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:26:05 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/13 19:00:07 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/14 19:08:34 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	sort_five(int *arr_a, int *arr_b, int *arr_c);
 void	bubble_sort(int *arr_c, int n);
 int		check_doubles(int *arr_a, int len);
 int		index_check(int range, int count, int size);
-void	switch_index(int *arr_c);
+int		switch_index(int *arr_c, int len);
 void	free_all(int *arr_a, int *arr_b, int *arr_c, int flag);
 void	k_sort(int *arr_a, int *arr_b, int *arr_c);
 int		is_sorted(int *arr_a, int *arr_c);
