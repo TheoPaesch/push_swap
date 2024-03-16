@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 15:49:57 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/14 21:06:57 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/15 08:30:04 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,12 @@ void	set_index(int *arr_a, int *arr_c)
 	i = 1;
 	while (i <= arr_a[0])
 	{
-		// ft_printf("%i\n", j);
 		j = 1;
 		while (j <= arr_a[0])
 		{
 			if (arr_a[i] == arr_c[j])
 			{
-				// ft_printf("arr_a_before = %i\n", arr_a[i]);
 				arr_a[i] = j;
-				// ft_printf("arr_a_after = %i\n", arr_a[i]);
 				break ;
 			}
 			j++;

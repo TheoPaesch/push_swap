@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   create_array.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:31:54 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/14 12:20:55 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/16 17:45:14 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 int	init_arr(int argc, char **argv)
 {
-	int	i;
-	int	*a;
-	int	*b;
-	int	*c;
+	int			i;
+	static int	*a = NULL;
+	static int	*b = NULL;
+	static int	*c = NULL;
 
-	a = NULL;
-	b = NULL;
-	c = NULL;
 	i = 1;
 	if (ft_malloc((argc * sizeof(int)), (void **)&a))
 		return (ft_error(5), 1);
@@ -38,7 +35,7 @@ int	init_arr(int argc, char **argv)
 		i++;
 	}
 	if (check_doubles(a, a[0]))
-		return (free_all(a, b, c, 0), 0);
+		free_all(a, b, c, 1);
 	ft_intcpy(c, a, a[0]);
 	k_sort(a, b, c);
 	return (0);

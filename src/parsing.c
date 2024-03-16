@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 12:30:31 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/13 19:13:45 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/16 17:44:20 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	check_doubles(int *arr_a, int len)
 		while (i <= len)
 		{
 			if (arr_a[i] == arr_a[j] && i != j)
-				return (ft_error(6), 1);
+				return (1);
 			i++;
 		}
 		j++;
