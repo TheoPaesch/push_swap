@@ -25,15 +25,13 @@ OBJS	:= ${SRCS:.c=.o}
 
 CC		:= cc
 
-all: libft $(NAME)
-
-libft:
-	make -C ./lib
+all: $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 $(NAME): $(OBJS)
+	make -C ./lib
 	$(CC) $(CLFAGS) $(OBJS) $(LIBFTA) -o $(NAME)
 
 clean:
