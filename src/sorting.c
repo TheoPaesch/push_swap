@@ -6,11 +6,11 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 18:09:03 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/13 15:17:39 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/18 12:48:30 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 int	ft_sqrd(int nb)
 {

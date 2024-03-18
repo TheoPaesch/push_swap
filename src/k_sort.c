@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   k_sort.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 13:27:24 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/15 08:20:33 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/18 12:48:05 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 void	pre_sort_b(int *arr_a, int *arr_b)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 15:49:57 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/15 08:30:04 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/18 12:48:03 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 int	switch_index(int *arr_c, int len)
 {

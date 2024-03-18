@@ -6,11 +6,11 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 18:00:19 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/14 12:39:46 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/18 13:21:30 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 int	ra(int *arr_a)
 {
@@ -27,7 +27,7 @@ int	ra(int *arr_a)
 			i++;
 		}
 		arr_a[arr_a[0]] = temp;
-		ft_printf("ra\n");
+		write(1, "ra\n", 3);
 		return (0);
 	}
 	return (1);
@@ -48,7 +48,7 @@ int	rb(int *arr_b)
 			i++;
 		}
 		arr_b[arr_b[0]] = temp;
-		ft_printf("rb\n");
+		write(1, "rb\n", 3);
 		return (0);
 	}
 	return (1);

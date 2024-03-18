@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   free_func.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 16:04:03 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/16 17:54:06 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/18 12:47:59 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 void	free_all(int *arr_a, int *arr_b, int *arr_c, int flag)
 {

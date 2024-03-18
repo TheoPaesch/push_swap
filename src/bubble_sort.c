@@ -6,11 +6,11 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 11:47:25 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/13 19:14:26 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/18 12:47:55 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 void	bubble_sort(int *arr_c, int size)
 {

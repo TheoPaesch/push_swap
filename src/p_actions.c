@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   p_actions.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:20:19 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/15 07:37:51 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/18 13:23:42 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 int	pa(int *arr_a, int *arr_b)
 {
@@ -34,7 +34,7 @@ int	pa(int *arr_a, int *arr_b)
 			i++;
 		}
 		arr_b[0] -= 1;
-		return (ft_printf("pa\n"), 0);
+		return (write(1, "pa\n", 3), 0);
 	}
 	return (1);
 }
@@ -61,7 +61,7 @@ int	pb(int *arr_a, int *arr_b)
 			i++;
 		}
 		arr_a[0] -= 1;
-		return (ft_printf("pb\n"), 0);
+		return (write(1, "pb\n", 3), 0);
 	}
 	return (1);
 }

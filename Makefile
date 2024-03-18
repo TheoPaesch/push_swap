@@ -1,10 +1,10 @@
 NAME	:= push_swap
 
-CFLAGS	:= -Wextra -Wall -Werror -g
+CFLAGS	:= -Wextra -Wall -Werror
 
 LIBFTA	:= ./lib/libftprintf.a
 
-INCLUDES	:= -I ./include -I ./lib/libft -I ./lib/libft/gnl
+INCLUDES	:= -I ./include/ -I ./lib/libft/ -I ./lib/libft/gnl/
 
 SRCDIR := ./src/
 
@@ -23,20 +23,18 @@ SRCS	:=  $(SRCDIR)main.c \
 
 OBJS	:= ${SRCS:.c=.o}
 
-HEADERS = include/push_swap.h
-
 CC		:= cc
 
-all: $(NAME)
+all: libft $(NAME)
 
-$(LIBFTA):
+libft:
 	make -C ./lib
 
-%.o: %.c $(HEADERS) Makefile
-	$(CC) $(CFLAGS) -o $@ -c $< $(INCLUDES) && printf "Compiling: $(notdir $<)\n"
+%.o: %.c
+	$(CC) $(CFLAGS) -o $@ -c $<
 
-$(NAME): $(LIBFTA) $(OBJS)
-	$(CC) $(LIBS) $^ -o $(NAME)
+$(NAME): $(OBJS)
+	$(CC) $(CLFAGS) $(OBJS) $(LIBFTA) -o $(NAME)
 
 clean:
 	make -C ./lib clean

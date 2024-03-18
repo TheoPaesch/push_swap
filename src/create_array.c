@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   create_array.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:31:54 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/16 17:45:14 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/18 12:47:47 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 int	init_arr(int argc, char **argv)
 {

@@ -6,11 +6,11 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:26:31 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/12 15:32:32 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/18 12:48:08 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 int	main(int argc, char **argv)
 {

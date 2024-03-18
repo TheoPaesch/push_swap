@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   rr_actions.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpaesch <tpaesch@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 23:13:29 by tpaesch           #+#    #+#             */
-/*   Updated: 2024/03/15 08:17:38 by tpaesch          ###   ########.fr       */
+/*   Updated: 2024/03/18 13:22:21 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 int	rrb(int *arr_b)
 {
@@ -27,7 +27,7 @@ int	rrb(int *arr_b)
 			i--;
 		}
 		arr_b[1] = temp;
-		ft_printf("rrb\n");
+		write(1, "rrb\n", 4);
 		return (0);
 	}
 	return (1);
@@ -48,7 +48,7 @@ int	rra(int *arr_a)
 			i--;
 		}
 		arr_a[1] = temp;
-		ft_printf("rra\n");
+		write(1, "rra\n", 4);
 		return (0);
 	}
 	return (1);
@@ -77,7 +77,7 @@ int	rrr(int *arr_a, int *arr_b)
 			i--;
 		}
 		arr_b[arr_b[0]] = temp;
-		ft_printf("rrr\n");
+		write(1, "rrr\n", 4);
 		return (0);
 	}
 	return (1);
